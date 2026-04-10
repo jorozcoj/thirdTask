@@ -1,24 +1,27 @@
 # Cypress Automation Project – Practice Software Testing
 
-##Overview
+## Overview
 This project contains automated end-to-end tests built with Cypress using the Page Object Model (POM) and ES Modules (ESM).
 
 The tests are based on BDD scenarios and cover key user flows of the Practice Software Testing application.
 
 ___
 
-##Tech Stack
--Cypress
--Javascript(ES Modules)
+## Tech Stack
+- Cypress
+- Javascript(ES Modules)
 - Page Object Model(POM)
 
 ___
 
-  ##Project Structure
-
+## Test Scenarios Covered
+- User registration
+- Update profile information
+- Add product to cart
+- Change Application Language
 ___
 
-  ##Installation
+  ## Installation
   Clone the repository and install dependencies
 
 ```bash

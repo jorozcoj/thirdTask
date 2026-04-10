@@ -25,6 +25,10 @@ class AuthPage {
         cy.get('[data-test="register-submit"]').click();
     }
 
+    goToLogin() {
+        cy.get('[data-test="nav-sign-in"]').click();
+    }
+
     login(email, password) {
         cy.get('[data-test="email"]').type(email);
         cy.get('[data-test="password"]').type(password);
@@ -32,9 +36,9 @@ class AuthPage {
     }
 
     verifyLoginSuccess() {
-        cy.get('[data-test="nav-menu"]').should('be.visible')
+        cy.get('.btn-group-vertical').should('be.visible')
     }
 
 }
 
-export default AuthPage;
+export default new AuthPage;

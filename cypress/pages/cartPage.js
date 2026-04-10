@@ -1,4 +1,5 @@
 class CartPage {
+
     addToCart() {
         cy.get('[data-test="add-to-cart"]').click()
     }
@@ -19,4 +20,4 @@ class CartPage {
 
 }
 
-export default new CartPage;
+export default new CartPage();
