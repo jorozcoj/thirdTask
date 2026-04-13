@@ -1,8 +1,8 @@
-import AuthPage from '../pages/authPage';
-import LanguageSelector from '../components/languageSelector';
-import CartPage from '../pages/cartPage';
-import ProductPage from '../pages/productPage';
-import ProfilePage from '../pages/profilePage';
+import AuthPage from '../po/pages/AuthPage';
+import LanguageSelector from '../po/components/languageSelector';
+import CartPage from '../po/pages/CartPage';
+import ProductPage from '../po/pages/productPage';
+import ProfilePage from '../po/pages/ProfilePage';
 
 const authPage = AuthPage;
 const language = LanguageSelector;
@@ -37,21 +37,21 @@ describe('User should be able to perform actions', () => {
     })
 
     it('should change language to Spanish', () => {
-        cy.visit('/');
+        authPage.visit();
         language.changeLanguage('es');
         language.verifyLanguageChanged();
     })
 
-    it('Should add product to cart'), () => {
+    it('Should add product to cart', () => {
         authPage.visit('/');
 
         product.selectFirstProduct();
         cart.addToCart();
         cart.verifyCart();
-    }
+    })
 
     it('should update user profile', () => {
-        authPage.visit('/');
+        authPage.visit();
         authPage.goToLogin();
         authPage.login('john.doe5@example.com', 'thisIsAStrongPassword123!');
         authPage.verifyLoginSuccess();

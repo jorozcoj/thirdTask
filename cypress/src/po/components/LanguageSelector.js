@@ -8,7 +8,6 @@ class LanguageSelector {
     verifyLanguageChanged() {
         cy.get('[data-test="nav-home"]').should('have.text', 'Inicio');
     }
-
 }
 
 export default new LanguageSelector()

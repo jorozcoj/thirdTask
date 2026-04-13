@@ -1,12 +1,12 @@
 class CartPage {
 
     addToCart() {
-        cy.get('[data-test="add-to-cart"]').click()
+        cy.get('[data-test="add-to-cart"]').should('be.visible').and('not.be.disabled').click()
     }
 
     verifyCart() {
         cy.get('[data-test="cart-quantity"]').should('not.have.text', '0')
-        cy.get('[data-test="product-title"]').should('be.visible')
+        cy.get('[data-test="product-name"]').should('be.visible')
     }
 
     addToFavorites() {
